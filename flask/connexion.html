@@ -47,13 +47,13 @@
 <body>
     <div class="container">
         <h2>Connexion</h2>
-        <form action="/submit-login-handler" method="post">
-            <label for="username">Identifiant:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" required>
-
+        <form action="/connexion" method="POST">
+            <label for="identifiant">Identifiant:</label>
+            <input type="text" id="identifiant" name="identifiant" required>
+            <br>
+            <label for="mdp">Mot de passe:</label>
+            <input type="password" id="mdp" name="mdp" required>
+            <br>
             <input type="submit" value="Connexion">
         </form>
     </div>
