@@ -1,19 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-<title>Inscription</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="button"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="button"] {
+            width: calc(50% - 4px);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<h1>Inscription :</h1>
-
-<form method="POST"> 
-    identifiant <input type="text" name="identifiant"/>
-    <br>
-    adresse e-mail <input type="email" name="email"/>
-    <br>
-    Mot de passe <input type="password" name="mdp"/>
-	<br>
-    <input type="submit" name="Inscription"/>
-<form/>
-<a href="/">Annuler</a>
+    <div class="container">
+        <h2>Inscription</h2>
+        <form method="POST"> 
+            <label for="identifiant">Identifiant:</label>
+            <input type="text" id="identifiant" name="identifiant" required>
+            <br>
+            <label for="email">Adresse e-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="mdp">Mot de passe:</label>
+            <input type="password" id="mdp" name="mdp" required>
+            <br>
+            <input type="submit" value="Inscription">
+            <input type="button" value="Annuler" onclick="window.location='/'">
+        </form>
+    </div>
 </body>
 </html>
+
