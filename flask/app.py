@@ -29,9 +29,9 @@ def inscription():
         password = Users['mdp']
 
         # Regex pour l'identifiant
-        if not re.match(r'^[a-zA-Z]{6,25}$', identifiant):
-            return "L'identifiant doit contenir au moins 6 caractères." 
-		#majuscule, minuscule + 6 à 25 caractères
+        if not re.match(r'^[a-zA-Z]{12,25}$', identifiant):
+            return "L'identifiant doit contenir au moins 12 caractères." 
+		#majuscule, minuscule + 12 à 25 caractères => recommandation ANSSI
 
         # Regex pour les contraintes de mail
         if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', mail):
