@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: unless-stopped
+    command: --character_set_client=utf8 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+   # volumes:
+    environment:
+      - MYSQL_DATABASE=sae61
+      - MYSQL_USER=sae61
+      - MYSQL_PASSWORD=sae61
+      - MYSQL_ROOT_PASSWORD=foo
+
+  flask:
+    image: flask:1.1
+    container_name: flask
+    restart: unless-stopped
+#    depends_on:
+#      - mariadb
+    ports:
+      - "5000:5000"
+
+  adminer:
+    image: adminer:latest
+    environment:
+      - ADMINER_DEFAULT_SERVER=mariadb
+    container_name: adminer
+    restart: unless-stopped
+    depends_on:
+      - mariadb
+    ports:
+      - "8080:8080"

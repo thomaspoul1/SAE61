@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .welcome-section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center; /* Center the buttons */
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .button {
+            display: inline-block; /* Display buttons side-by-side */
+            width: 180px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SAE61</h1>
+    </header>
+    <div class="welcome-section">
+        <h2>Bienvenue sur notre page d'accueil.</h2>
+        <p>Voici le repot git: A METTRE</p>
+        <a href="/inscription" class="button">S'inscrire</a>
+        <a href="/connexion" class="button">Se Connecter</a>
+    </div>
+    <footer>
+        <p>© 2024 Par Thomas et Nordine. Tous droits réservés.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.animate([
+                    { transform: 'scale(1)', opacity: 1 },
+                    { transform: 'scale(1.1)', opacity: 0.9 },
+                    { transform: 'scale(1)', opacity: 1 }
+                ], {
+                    duration: 1000,
+                    iterations: Infinity,
+                    direction: 'alternate',
+                    easing: 'ease-in-out'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
